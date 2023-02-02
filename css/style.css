@@ -1,0 +1,230 @@
+* {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      text-decoration: none;
+      font-family: "Google Sans Regular";
+      box-sizing: border-box;
+}
+
+body {
+      background-color: #fefefe;
+}
+
+/**********  NavBar  ************/
+header {
+      width: 100%;
+      height: 80px;
+      background: #11101b;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 100px;
+}
+
+.logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: #fefefe;
+}
+
+.humburger {
+      display: none;
+}
+
+.nav-bar ul {
+      display: flex;
+}
+
+.nav-bar ul li a {
+      display: block;
+      color: #fefefe;
+      font-size: 20px;
+      padding: 10px 25px;
+      border-radius: 50px;
+      transition: 0.2s;
+      margin: 0 5px;
+}
+
+.nav-bar ul li a:hover {
+      color: #11101b;
+      background: #fefefe;
+}
+
+.nav-bar ul li a.active {
+      color: #11101b;
+      background: #fefefe;
+}
+
+
+.container {
+      width: 100vw;
+      height: 100%;
+      min-height: calc(100vh - 80px);
+      background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+
+/**********  item select  ************/
+
+.nav-select {
+      display: flex;
+      justify-content: center;
+      width: 100vw;
+}
+
+.selector-group {
+      display: flex;
+      width: 60vw;
+      height: 50px;   
+      background-color: rgb(255, 255, 255);
+      margin-top: 15px;
+      border-radius: 15px;
+      box-shadow: 0px 0px 75px black;
+      flex-direction: row;
+      margin-bottom: 50px;
+}
+.select-btn{
+      flex: 0 0 50%;
+      max-width: 50%;
+}
+
+.nameBtn{
+      border-right: solid 1.5px grey;
+}
+.dateBtn{
+      border-left: solid 1.5px grey;
+      width: 100%;
+      height: 100%;
+      border-radius:0 15px 15px 0;
+}
+
+.nameBtn select{
+      width: 100%;
+      height: 100%;
+      border-radius: 15px 0 0 15px;
+      font-size: 25px;
+      text-align: center;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-style: bold;
+}
+
+.dateBtn input{
+      width: 100%;
+      height: 100%;
+      border-radius:0 15px 15px 0;
+      font-size: 25px;
+      text-align: center;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-style: bold;
+      
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1320px) {
+      header {
+            padding: 0 50px;
+      }
+}
+
+@media only screen and (max-width: 1100px) {
+      header {
+            padding: 0 30px;
+      }
+}
+
+@media only screen and (max-width: 900px) {
+      .humburger {
+            display: block;
+            cursor: pointer;
+      }
+
+      .humburger .line {
+            width: 30px;
+            height: 3px;
+            background: #fefefe;
+            margin: 6px 0;
+      }
+
+      .nav-bar {
+            height: 0;
+            position: absolute;
+            top: 80px;
+            left: 0;
+            right: 0;
+            width: 100vw;
+            background: #11101b;
+            transition: 0.5s;
+            overflow: hidden;
+            opacity: 1;
+      }
+
+      .nav-bar.active {
+            height: 300px;
+      }
+
+      .nav-bar ul {
+            display: block;
+            width: fit-content;
+            margin: 80px auto 0 auto;
+            text-align: center;
+            transition: 0.5s;
+            opacity: 0;
+      }
+
+      .nav-bar.active ul {
+            opacity: 1;
+      }
+
+      .nav-bar ul li a {
+            margin-bottom: 12px;
+      }
+
+      .dateBtn input{
+            font-size: 20px;
+      }
+
+}
+
+@media only screen and (max-width: 660px) {
+      .dateBtn input{
+            font-size: 17px;
+      }
+}
+
+@media only screen and (max-width: 570px) {
+      .selector-group {
+            width: 100%;  
+            margin-top: 0;
+            border-radius: 0;
+            margin-bottom: 40px;
+      } 
+      .dateBtn, .dateBtn input,.nameBtn select{
+            border-radius:0;
+      }
+
+}
